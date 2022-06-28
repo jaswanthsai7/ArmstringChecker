@@ -17,7 +17,7 @@ class ArmstrongCheckerTest {
     }
 
     @ParameterizedTest(name = "isArmstrong({0}) = true")
-    @ValueSource(ints = {153, 370, 371, 407, 54748})
+    @ValueSource(ints = {153, 370, 371, 407})
     void shouldBeAValidArmstrongNumber(int number) {
         assertTrue(armstrongChecker.isArmstrong(number));
     }
