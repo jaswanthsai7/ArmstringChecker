@@ -11,7 +11,6 @@ public class ArmstrongChecker {
      * @return true if the number is an Armstrong number, false otherwise.
      */
     public boolean isArmstrong(int number) {
-
         int remainder;
         int sum = 0;
         int armstrong = number;//assigning the number to another variable
