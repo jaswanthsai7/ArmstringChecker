@@ -11,6 +11,25 @@ public class ArmstrongChecker {
      * @return true if the number is an Armstrong number, false otherwise.
      */
     public boolean isArmstrong(int number) {
-        return false;
+
+        int remainder;
+        int sum = 0;
+        int armstrong = number;//assigning the number to another variable
+        boolean isArmstrong = false;// declaring and initializing the boolean value
+        if (number < 0) {// checks if number is negative
+            isArmstrong = false;
+        } else {
+            while (number != 0) {// loop for the armstrong
+                remainder = number % 10;
+                sum = sum + (remainder * remainder * remainder);
+                number = number / 10;
+            }
+            if (sum == armstrong) {// check if the sum of number is equal to the input
+                isArmstrong = true;
+            } else {
+                isArmstrong = false;
+            }
+        }
+        return isArmstrong;
     }
 }
